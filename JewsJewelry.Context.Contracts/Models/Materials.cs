@@ -8,5 +8,14 @@ namespace JewsJewelry.Context.Contracts.Models
 {
     internal class Materials
     {
+
+        public string Name { get; set; } = string.Empty;
+
+        public string Description { get; set; } = string.Empty;
+
+        public int Amount { get; set; }
+
+
+
     }
 }

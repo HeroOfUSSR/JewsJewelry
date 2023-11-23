@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JewsJewelry.Context.Contracts.Models
+namespace JewsJewelry.Context.Contracts.Enums
 {
-    internal class ProductType
+    internal class Class2
     {
-        public string Name { get; set; }
-
     }
 }

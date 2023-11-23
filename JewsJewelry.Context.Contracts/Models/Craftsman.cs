@@ -31,8 +31,6 @@ namespace JewsJewelry.Context.Contracts.Models
         /// </summary>
         public string PhoneNumber { get; set; } = string.Empty;
 
-        public 
-
 
     }
 }

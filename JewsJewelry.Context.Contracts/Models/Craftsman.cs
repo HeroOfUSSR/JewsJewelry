@@ -12,17 +12,17 @@ namespace JewsJewelry.Context.Contracts.Models
     public class Craftsman : BaseAuditEntity
     {
         /// <summary>
-        /// Фамилия
+        /// Имя мастера
         /// </summary>
-        public string LastName { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
-        /// Имя
+        /// Фамилия мастера
         /// </summary>
-        public string FirstName { get; set; } = string.Empty;
+        public string Surname { get; set; } = string.Empty;
 
         /// <summary>
-        /// Отчество
+        /// Отчество мастера
         /// </summary>
         public string Patronymic { get; set; } = string.Empty;
 
@@ -30,6 +30,9 @@ namespace JewsJewelry.Context.Contracts.Models
         /// Номер телефона
         /// </summary>
         public string PhoneNumber { get; set; } = string.Empty;
+
+        public Guid WorkshopId { get; set; }
+        public Workshop Workshop { get; set;}
 
 
     }

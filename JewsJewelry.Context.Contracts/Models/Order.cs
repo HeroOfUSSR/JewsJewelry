@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Context.Contracts.Models
 {
-    internal class Orders
+    public class Orders : BaseAuditEntity
     {
         /// <summary>
         /// Наименование заказа
@@ -28,12 +28,21 @@ namespace JewsJewelry.Context.Contracts.Models
         /// </summary>
         DateTimeOffset DoneDate { get; set; }
 
+        /// <summary>
+        /// ID изделия
+        /// </summary>
         public Guid JewelryId { get; set; }
         public Jewelries Jewelries { get; set; }
 
+        /// <summary>
+        /// ID покупателя
+        /// </summary>
         public Guid CustomerId { get; set; }
         public Customer Customer { get; set; }
 
+        /// <summary>
+        /// ID мастерской
+        /// </summary>
         public Guid WorkshopId { get; set; }
         public Workshop Workshop { get; set; }
         

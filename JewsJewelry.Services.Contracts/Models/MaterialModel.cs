@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Services.Contracts.Models
 {
-    internal class CustomersModel
+    internal class MaterialModel
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Context.Contracts.Models
 {
-    internal class Customer : BaseAuditEntity
+    public class Customer : BaseAuditEntity
     {
         /// <summary>
         /// Имя заказчика

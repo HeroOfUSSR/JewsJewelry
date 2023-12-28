@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JewsJewelry.Repositories.Contracts.Interface
+namespace JewsJewelry.Context.Contracts.Config.Configs
 {
-    public class IOrdersReadRepository
+    internal class OrderEntityTypeConfig
     {
     }
 }

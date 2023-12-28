@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JewsJewelry.Repositories.Implementations
+namespace JewsJewelry.Services.Contracts.Models
 {
-    internal class CraftsmanReadRepository
+    internal class OrderModel
     {
     }
 }

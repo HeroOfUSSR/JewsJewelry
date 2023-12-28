@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Services.Contracts.Interface
 {
-    internal class IJewelriesService
+    internal class IMaterialService
     {
     }
 }

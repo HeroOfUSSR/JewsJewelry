@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Repositories.Contracts.Interface
 {
-    internal class IJewelriesReadRepository
+    public class IJewelriesReadRepository
     {
     }
 }

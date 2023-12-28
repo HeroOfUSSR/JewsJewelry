@@ -3,25 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.API", "JewsJewelry\JewsJewelry.API.csproj", "{E29AC559-DF56-4096-9E84-FAF4C24AB92C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.API", "JewsJewelry\JewsJewelry.API.csproj", "{E29AC559-DF56-4096-9E84-FAF4C24AB92C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Context", "JewsJewelry.Context\JewsJewelry.Context.csproj", "{128DACEF-F833-43E8-893E-1D38D1A5EC84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.Context", "JewsJewelry.Context\JewsJewelry.Context.csproj", "{128DACEF-F833-43E8-893E-1D38D1A5EC84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Context.Contracts", "JewsJewelry.Context.Contracts\JewsJewelry.Context.Contracts.csproj", "{740BA7C9-C5F2-4A1F-B399-8FF7C469C6B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.Context.Contracts", "JewsJewelry.Context.Contracts\JewsJewelry.Context.Contracts.csproj", "{740BA7C9-C5F2-4A1F-B399-8FF7C469C6B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Repositories", "JewsJewelry.Repositories\JewsJewelry.Repositories.csproj", "{F1F860C9-75C0-42D6-845E-8F9C6B6CDEC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.Repositories", "JewsJewelry.Repositories\JewsJewelry.Repositories.csproj", "{F1F860C9-75C0-42D6-845E-8F9C6B6CDEC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Repositories.Contracts", "JewsJewelry.Repositories.Contracts\JewsJewelry.Repositories.Contracts.csproj", "{EF627B11-ED63-49A7-87F4-9C8CCE139587}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.Repositories.Contracts", "JewsJewelry.Repositories.Contracts\JewsJewelry.Repositories.Contracts.csproj", "{EF627B11-ED63-49A7-87F4-9C8CCE139587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Repositories.Tests", "JewsJewelry.Repositories.Tests\JewsJewelry.Repositories.Tests.csproj", "{B57E7C17-A7E0-49F9-A76E-EB28BCEBBEB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.Repositories.Tests", "JewsJewelry.Repositories.Tests\JewsJewelry.Repositories.Tests.csproj", "{B57E7C17-A7E0-49F9-A76E-EB28BCEBBEB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Services", "JewsJewelry.Services\JewsJewelry.Services.csproj", "{EAE72EF9-1852-4361-A245-1F3799E4638E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.Services", "JewsJewelry.Services\JewsJewelry.Services.csproj", "{EAE72EF9-1852-4361-A245-1F3799E4638E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Services.Contracts", "JewsJewelry.Services.Contracts\JewsJewelry.Services.Contracts.csproj", "{22F37C3D-2340-4B6D-9F8E-448BE8F4F5C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.Services.Contracts", "JewsJewelry.Services.Contracts\JewsJewelry.Services.Contracts.csproj", "{22F37C3D-2340-4B6D-9F8E-448BE8F4F5C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Services.Tests", "JewsJewelry.Services.Tests\JewsJewelry.Services.Tests.csproj", "{19DEF690-704F-4728-96E3-BA26F1F2623C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.Services.Tests", "JewsJewelry.Services.Tests\JewsJewelry.Services.Tests.csproj", "{19DEF690-704F-4728-96E3-BA26F1F2623C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.API.Tests", "JewsJewelry.API.Tests\JewsJewelry.API.Tests.csproj", "{ACD32127-2627-4625-ABDF-EDBE124A9FEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewsJewelry.API.Tests", "JewsJewelry.API.Tests\JewsJewelry.API.Tests.csproj", "{ACD32127-2627-4625-ABDF-EDBE124A9FEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Common.Entity", "JewsJewelry.Common.Entity\JewsJewelry.Common.Entity.csproj", "{B31686E5-2FAC-47D1-B6AA-E3678536FD86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Context.Contracts.Config", "JewsJewelry.Context.Contracts.Config\JewsJewelry.Context.Contracts.Config.csproj", "{D7433368-B98C-46CD-96D4-B957745EF32C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.Context.Tests", "JewsJewelry.Context.Tests\JewsJewelry.Context.Tests.csproj", "{8E058687-5B63-489E-8EB5-946C11AA7FE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewsJewelry.General", "JewsJewelry.General\JewsJewelry.General.csproj", "{D3A06D68-9247-4EAD-81A8-3924EE0C3C0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +77,22 @@ Global
 		{ACD32127-2627-4625-ABDF-EDBE124A9FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACD32127-2627-4625-ABDF-EDBE124A9FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACD32127-2627-4625-ABDF-EDBE124A9FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B31686E5-2FAC-47D1-B6AA-E3678536FD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B31686E5-2FAC-47D1-B6AA-E3678536FD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B31686E5-2FAC-47D1-B6AA-E3678536FD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B31686E5-2FAC-47D1-B6AA-E3678536FD86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7433368-B98C-46CD-96D4-B957745EF32C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7433368-B98C-46CD-96D4-B957745EF32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7433368-B98C-46CD-96D4-B957745EF32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7433368-B98C-46CD-96D4-B957745EF32C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E058687-5B63-489E-8EB5-946C11AA7FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E058687-5B63-489E-8EB5-946C11AA7FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E058687-5B63-489E-8EB5-946C11AA7FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E058687-5B63-489E-8EB5-946C11AA7FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A06D68-9247-4EAD-81A8-3924EE0C3C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A06D68-9247-4EAD-81A8-3924EE0C3C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A06D68-9247-4EAD-81A8-3924EE0C3C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A06D68-9247-4EAD-81A8-3924EE0C3C0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

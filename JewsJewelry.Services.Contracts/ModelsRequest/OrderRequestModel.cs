@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JewsJewelry.Services.Contracts.Interface
+namespace JewsJewelry.Services.Contracts.ModelsRequest
 {
-    internal class IOrdersService
+    internal class OrderRequestModel
     {
     }
 }

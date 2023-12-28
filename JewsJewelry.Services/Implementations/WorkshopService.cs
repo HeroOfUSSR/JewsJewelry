@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JewsJewelry.Services.Contracts.Models
+namespace JewsJewelry.Services.Implementations
 {
-    internal class OrdersModel
+    internal class WorkshopService
     {
     }
 }

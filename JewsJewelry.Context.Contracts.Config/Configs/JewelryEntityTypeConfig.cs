@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JewsJewelry.Services.Contracts.Models
+namespace JewsJewelry.Context.Contracts.Config.Configs
 {
-    internal class ProductTypeModel
+    internal class JewelryEntityTypeConfig
     {
     }
 }

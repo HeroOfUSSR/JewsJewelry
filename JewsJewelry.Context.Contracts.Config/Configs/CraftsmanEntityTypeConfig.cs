@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JewsJewelry.Services.Contracts.Interface
+namespace JewsJewelry.Context.Contracts.Config.Configs
 {
-    internal class IMaterialsService
+    internal class CraftsmanEntityTypeConfig
     {
     }
 }

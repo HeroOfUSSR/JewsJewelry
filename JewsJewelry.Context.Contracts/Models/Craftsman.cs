@@ -31,8 +31,11 @@ namespace JewsJewelry.Context.Contracts.Models
         /// </summary>
         public string PhoneNumber { get; set; } = string.Empty;
 
+        /// <summary>
+        /// ID мастерской
+        /// </summary>
         public Guid WorkshopId { get; set; }
-        public Workshop Workshop { get; set;}
+        public Workshop Workshop { get; set; }
 
 
     }

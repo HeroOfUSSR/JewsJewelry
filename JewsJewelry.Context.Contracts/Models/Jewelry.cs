@@ -9,7 +9,7 @@ namespace JewsJewelry.Context.Contracts.Models
     /// <summary>
     /// Ювелирное изделие
     /// </summary>
-    internal class Jewelries : BaseAuditEntity
+    public class Jewelries : BaseAuditEntity
     {
         /// <summary>
         /// Название
@@ -31,6 +31,9 @@ namespace JewsJewelry.Context.Contracts.Models
         /// </summary>
         public string? Description { get; set; }
         
+        /// <summary>
+        /// ID материала
+        /// </summary>
         public Guid MaterialId { get; set; }
         public Materials Material { get; set; }
 

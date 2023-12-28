@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JewsJewelry.Services.Contracts.Interface
+namespace JewsJewelry.Repositories.Contracts.Interface
 {
-    internal class ICustomersService
+    public class IWorkshopReadRepository
     {
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace JewsJewelry.Context.Contracts.Models
 {
     /// <summary>
-    /// Предмет
+    /// Мастер
     /// </summary>
     public class Craftsman : BaseAuditEntity
     {
@@ -32,10 +32,17 @@ namespace JewsJewelry.Context.Contracts.Models
         public string PhoneNumber { get; set; } = string.Empty;
 
         /// <summary>
+        /// Возраст мастера
+        /// </summary>
+        public int Age { get; set; }
+
+        /// <summary>
         /// ID мастерской
         /// </summary>
         public Guid WorkshopId { get; set; }
         public Workshop Workshop { get; set; }
+
+
 
 
     }

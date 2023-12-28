@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Context.Contracts.Models
 {
-    public class Materials : BaseAuditEntity
+    /// <summary>
+    /// Материал
+    /// </summary>
+    public class Material : BaseAuditEntity
     {
         /// <summary>
         /// Название материала
@@ -28,7 +31,7 @@ namespace JewsJewelry.Context.Contracts.Models
         /// </summary>
         public int Amount { get; set; }
 
-        public ICollection<Jewelries> Jewelries { get; set; }
+        public ICollection<Jewelry> Jewelries { get; set; }
 
 
 

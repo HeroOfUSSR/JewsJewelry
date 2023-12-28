@@ -17,6 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JewsJewelry.Common.Entity\JewsJewelry.Common.Entity.csproj" />
+    <ProjectReference Include="..\JewsJewelry.Context.Contracts.Config\JewsJewelry.Context.Contracts.Config.csproj" />
     <ProjectReference Include="..\JewsJewelry.Context.Contracts\JewsJewelry.Context.Contracts.csproj" />
   </ItemGroup>
 

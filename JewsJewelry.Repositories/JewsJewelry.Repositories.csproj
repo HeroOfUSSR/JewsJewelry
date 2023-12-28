@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JewsJewelry.Context.Contracts\JewsJewelry.Context.Contracts.csproj" />
+    <ProjectReference Include="..\JewsJewelry.Common.Entity\JewsJewelry.Common.Entity.csproj" />
+    <ProjectReference Include="..\JewsJewelry.General\JewsJewelry.General.csproj" />
     <ProjectReference Include="..\JewsJewelry.Repositories.Contracts\JewsJewelry.Repositories.Contracts.csproj" />
   </ItemGroup>
 

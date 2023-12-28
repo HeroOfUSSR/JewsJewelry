@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Context.Contracts.Models
 {
+    /// <summary>
+    /// Заказчик
+    /// </summary>
     public class Customer : BaseAuditEntity
     {
         /// <summary>
@@ -33,7 +36,7 @@ namespace JewsJewelry.Context.Contracts.Models
         /// </summary>
         public string Email { get; set; } = string.Empty;
 
-        public ICollection<Orders> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
 
 
     }

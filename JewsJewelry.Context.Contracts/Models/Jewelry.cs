@@ -9,8 +9,14 @@ namespace JewsJewelry.Context.Contracts.Models
     /// <summary>
     /// Ювелирное изделие
     /// </summary>
-    public class Jewelries : BaseAuditEntity
+    public class Jewelry : BaseAuditEntity
     {
+        /// <summary>
+        /// ID материала
+        /// </summary>
+        public Guid MaterialId { get; set; }
+        public Material Material { get; set; }
+
         /// <summary>
         /// Название
         /// </summary>
@@ -31,13 +37,8 @@ namespace JewsJewelry.Context.Contracts.Models
         /// </summary>
         public string? Description { get; set; }
         
-        /// <summary>
-        /// ID материала
-        /// </summary>
-        public Guid MaterialId { get; set; }
-        public Materials Material { get; set; }
 
-        public ICollection<Orders> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
 
     }
 }

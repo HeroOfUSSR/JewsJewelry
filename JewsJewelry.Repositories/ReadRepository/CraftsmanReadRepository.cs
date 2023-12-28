@@ -1,6 +1,8 @@
-﻿using JewsJewelry.Context.Contracts;
+﻿using JewsJewelry.Common.Entity.DBInterface;
+using JewsJewelry.Context.Contracts;
 using JewsJewelry.Context.Contracts.Models;
 using JewsJewelry.Repositories.Contracts.Interface;
+using JewsJewelry.Repositories.Marker;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +11,25 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Repositories.Implementations
 {
-    public class CraftsmanReadRepository : ICraftsmanReadRepository
+    /// <summary>
+    /// Реализация <see cref="ICraftsmanReadRepository"/>
+    /// </summary>
+    public class CraftsmanReadRepository : ICraftsmanReadRepository, IRepositoryMarker
     {
 
-        private IJewelryContext context;
+        private IDBRead reader;
 
-        public CraftsmanReadRepository(IJewelryContext context) 
+        public CraftsmanReadRepository(IDBRead reader) 
         { 
-            this.context = context;
+            this.reader = reader;
         }
 
-        Task<List<Craftsman>>
+        Task<IReadOnlyCollection<Craftsman>> ICraftsmanReadRepository.GetAllAsync(Guid id, CancellationToken cancellationToken)
+            => reader.Read<Craftsman>()
+            .NotDeletedAt()
+            .OrderBy(x => x.Name)
+            .ToReadOnlyCollectionAsync(cancellationToken);
+
+        Task<Craftsman?> ICraftsmanReadRepository.GetByIdAsync(Guid id, CancellationToken cancellationToken)
     }
 }

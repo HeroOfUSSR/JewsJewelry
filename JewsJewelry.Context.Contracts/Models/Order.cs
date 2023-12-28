@@ -6,8 +6,29 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Context.Contracts.Models
 {
-    public class Orders : BaseAuditEntity
+    /// <summary>
+    /// Заказ
+    /// </summary>
+    public class Order : BaseAuditEntity
     {
+        /// <summary>
+        /// ID изделия
+        /// </summary>
+        public Guid JewelryId { get; set; }
+        public Jewelry Jewelries { get; set; }
+
+        /// <summary>
+        /// ID покупателя
+        /// </summary>
+        public Guid CustomerId { get; set; }
+        public Customer Customer { get; set; }
+
+        /// <summary>
+        /// ID мастерской
+        /// </summary>
+        public Guid WorkshopId { get; set; }
+        public Workshop Workshop { get; set; }
+
         /// <summary>
         /// Наименование заказа
         /// </summary>
@@ -21,30 +42,14 @@ namespace JewsJewelry.Context.Contracts.Models
         /// <summary>
         /// Дата создания заказа
         /// </summary>
-        DateTimeOffset OrderDate { get; set; }
+        public DateTimeOffset OrderDate { get; set; }
 
         /// <summary>
         /// Дата закрытия заказа
         /// </summary>
-        DateTimeOffset DoneDate { get; set; }
+        public DateTimeOffset DoneDate { get; set; }
 
-        /// <summary>
-        /// ID изделия
-        /// </summary>
-        public Guid JewelryId { get; set; }
-        public Jewelries Jewelries { get; set; }
-
-        /// <summary>
-        /// ID покупателя
-        /// </summary>
-        public Guid CustomerId { get; set; }
-        public Customer Customer { get; set; }
-
-        /// <summary>
-        /// ID мастерской
-        /// </summary>
-        public Guid WorkshopId { get; set; }
-        public Workshop Workshop { get; set; }
+        
         
 
 

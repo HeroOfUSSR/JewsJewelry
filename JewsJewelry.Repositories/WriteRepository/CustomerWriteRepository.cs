@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JewsJewelry.Repositories.Implementations
+namespace JewsJewelry.Repositories.WriteRepository
 {
-    internal class JewelriesReadRepository
+    internal class CustomerWriteRepository
     {
     }
 }

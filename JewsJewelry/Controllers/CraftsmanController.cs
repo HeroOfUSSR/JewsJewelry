@@ -1,21 +1,18 @@
 ﻿using AutoMapper;
+using JewsJewelry.API.Exceptions;
+using JewsJewelry.API.Models.CreateRequest;
+using JewsJewelry.API.Models.Request;
+using JewsJewelry.API.Models.Response;
 using JewsJewelry.Services.Contracts.Interface;
+using JewsJewelry.Services.Contracts.Models;
+using JewsJewelry.Services.Implementations;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace JewsJewelry.API.Controllers
 {
-
-    /*[ApiController]
-    [Route("controller")]
-    [ApiExplorerSettings(GroupName = "Craftsman")]
-    public class CraftsmanController : ControllerBase
-    {
-      private readonly ICraftsmanSer
-    }
-}
-
     /// <summary>
-    /// CRUD контроллер по работе с кинотеатрами
+    /// CRUD контроллер по работе с мастерами
     /// </summary>
     [ApiController]
     [Route("[Controller]")]
@@ -32,71 +29,71 @@ namespace JewsJewelry.API.Controllers
         }
 
         /// <summary>
-        /// Получить список кинотеатров
+        /// Получить список мастеров
         /// </summary>
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<CinemaResponse>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<CraftsmanResponse>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
         {
-            var result = await cinemaService.GetAllAsync(cancellationToken);
-            return Ok(result.Select(x => mapper.Map<CinemaResponse>(x)));
+            var result = await craftsmanService.GetAllAsync(cancellationToken);
+            return Ok(result.Select(x => mapper.Map<CraftsmanResponse>(x)));
         }
 
         /// <summary>
-        /// Получить кинотетар по Id
+        /// Получить мастера по айди
         /// </summary>
         [HttpGet("{id:guid}")]
-        [ProducesResponseType(typeof(CinemaResponse), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ApiExceptionDetail), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(CraftsmanResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(APIExc), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetById([Required] Guid id, CancellationToken cancellationToken)
         {
-            var item = await cinemaService.GetByIdAsync(id, cancellationToken);
-            return Ok(mapper.Map<CinemaResponse>(item));
+            var item = await craftsmanService.GetByIdAsync(id, cancellationToken);
+            return Ok(mapper.Map<CraftsmanResponse>(item));
         }
 
         /// <summary>
-        /// Добавить кинотеатр
+        /// Добавить мастера
         /// </summary>
         [HttpPost]
-        [ProducesResponseType(typeof(CinemaResponse), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ApiValidationExceptionDetail), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(ApiExceptionDetail), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(CraftsmanResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(APIExcValidation), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(APIExc), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Add([FromBody] CreateCinemaRequest model, CancellationToken cancellationToken)
+        public async Task<IActionResult> Add([FromBody] CreateCraftsmanReq model, CancellationToken cancellationToken)
         {
-            var cinemaModel = mapper.Map<CinemaModel>(model);
-            var result = await cinemaService.AddAsync(cinemaModel, cancellationToken);
-            return Ok(mapper.Map<CinemaResponse>(result));
+            var craftsmanModel = mapper.Map<CraftsmanModel>(model);
+            var result = await craftsmanService.AddAsync(craftsmanModel, cancellationToken);
+            return Ok(mapper.Map<CraftsmanResponse>(result));
         }
 
         /// <summary>
-        /// Изменить кинотеатр
+        /// Изменить мастера
         /// </summary>
         [HttpPut]
-        [ProducesResponseType(typeof(CinemaResponse), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ApiValidationExceptionDetail), StatusCodes.Status409Conflict)]
-        [ProducesResponseType(typeof(ApiExceptionDetail), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(ApiExceptionDetail), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(CraftsmanResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(APIExcValidation), StatusCodes.Status409Conflict)]
+        [ProducesResponseType(typeof(APIExc), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(APIExc), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Edit(CinemaRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> Edit(CraftsmanRequest request, CancellationToken cancellationToken)
         {
-            var model = mapper.Map<CinemaModel>(request);
-            var result = await cinemaService.EditAsync(model, cancellationToken);
-            return Ok(mapper.Map<CinemaResponse>(result));
+            var model = mapper.Map<CraftsmanModel>(request);
+            var result = await craftsmanService.EditAsync(model, cancellationToken);
+            return Ok(mapper.Map<CraftsmanResponse>(result));
         }
 
         /// <summary>
-        /// Удалить Кинотеатр по Id
+        /// Удалить мастера по айди
         /// </summary>
         [HttpDelete("{id:guid}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ApiExceptionDetail), StatusCodes.Status404NotFound)]
-        [ProducesResponseType(typeof(ApiExceptionDetail), StatusCodes.Status417ExpectationFailed)]
+        [ProducesResponseType(typeof(APIExc), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(APIExc), StatusCodes.Status417ExpectationFailed)]
         public async Task<IActionResult> Delete([Required] Guid id, CancellationToken cancellationToken)
         {
-            await cinemaService.DeleteAsync(id, cancellationToken);
+            await craftsmanService.DeleteAsync(id, cancellationToken);
             return Ok();
         }
     }
-}*/
 }
+

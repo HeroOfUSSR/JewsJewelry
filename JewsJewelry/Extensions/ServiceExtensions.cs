@@ -58,7 +58,7 @@ namespace JewsJewelry.API.Extensions
                 c.SwaggerDoc("Order", new OpenApiInfo { Title = "Заказы", Version = "v1" });
                 c.SwaggerDoc("Workshop", new OpenApiInfo { Title = "Мастерские", Version = "v1" });
 
-                var filePath = Path.Combine(AppContext.BaseDirectory, "TicketSelling.API.xml");
+                var filePath = Path.Combine(AppContext.BaseDirectory, "JewsJewelry.API.xml");
                 c.IncludeXmlComments(filePath);
             });
         }
@@ -71,12 +71,12 @@ namespace JewsJewelry.API.Extensions
             web.UseSwagger();
             web.UseSwaggerUI(x =>
             {
-                x.SwaggerEndpoint("Cinema/swagger.json", "Кинотеатры");
-                x.SwaggerEndpoint("Client/swagger.json", "Клиенты");
-                x.SwaggerEndpoint("Film/swagger.json", "Фильмы");
-                x.SwaggerEndpoint("Hall/swagger.json", "Залы");
-                x.SwaggerEndpoint("Staff/swagger.json", "Работники");
-                x.SwaggerEndpoint("Ticket/swagger.json", "Билеты");
+                x.SwaggerEndpoint("Craftsman/swagger.json", "Мастера");
+                x.SwaggerEndpoint("Customer/swagger.json", "Заказчики");
+                x.SwaggerEndpoint("Jewelry/swagger.json", "Ювелирные изделия");
+                x.SwaggerEndpoint("Material/swagger.json", "Материалы");
+                x.SwaggerEndpoint("Order/swagger.json", "Заказы");
+                x.SwaggerEndpoint("Workshop/swagger.json", "Мастерские");
             });
         }
     }

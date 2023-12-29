@@ -1,4 +1,5 @@
-﻿using JewsJewelry.Services.Contracts.Exceptions;
+﻿using JewsJewelry.API.Exceptions;
+using JewsJewelry.Services.Contracts.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -6,7 +7,6 @@ namespace JewsJewelry.API.Extensions
 {
     public class OrderExceptionFilter : IExceptionFilter
     {
-        /// <inheritdoc/>
         public void OnException(ExceptionContext context)
         {
             var exception = context.Exception as DefaultException;
@@ -19,33 +19,33 @@ namespace JewsJewelry.API.Extensions
             {
                 case ValidsException ex:
                     SetDataToContext(
-                        new ConflictObjectResult(new ApiValidationExceptionDetail
+                        new ConflictObjectResult(new APIExcValidation
                         {
                             Errors = ex.Errors,
                         }),
                         context);
                     break;
 
-                case TimeTableInvalidOperationException ex:
+                case InvalidOpsException ex:
                     SetDataToContext(
-                        new BadRequestObjectResult(new ApiExceptionDetail { Message = ex.Message, })
+                        new BadRequestObjectResult(new APIExc { Msg = ex.Message, })
                         {
                             StatusCode = StatusCodes.Status406NotAcceptable,
                         },
                         context);
                     break;
 
-                case TimeTableNotFoundException ex:
-                    SetDataToContext(new NotFoundObjectResult(new ApiExceptionDetail
+                case NtFoundException ex:
+                    SetDataToContext(new NotFoundObjectResult(new APIExc
                     {
-                        Message = ex.Message,
+                        Msg = ex.Message,
                     }), context);
                     break;
 
                 default:
-                    SetDataToContext(new BadRequestObjectResult(new ApiExceptionDetail
+                    SetDataToContext(new BadRequestObjectResult(new APIExc
                     {
-                        Message = $"Ошибка записи в БД (Проверьте индексы). {exception.Message}",
+                        Msg = $"Ошибка записи в БД (Проверьте индексы). {exception.Message}",
                     }), context);
                     break;
             }

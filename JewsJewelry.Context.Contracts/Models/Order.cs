@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JewsJewelry.Common.Entity.EntityInterface;
 
 namespace JewsJewelry.Context.Contracts.Models
 {

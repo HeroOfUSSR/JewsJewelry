@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JewsJewelry.Common.Entity.EntityInterface;
+
 
 namespace JewsJewelry.Context.Contracts.Models
 {
     /// <summary>
     /// Базовый класс с аудитом
     /// </summary>
-    public abstract class BaseAuditEntity
+    public abstract class BaseAuditEntity : IEntity, IEntityId, 
+        IEntityAuditCreated, 
+        IEntityAuditUpdated, 
+        IEntityAuditDeleted
     {
         /// <summary>
         /// Идентификатор

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using JewsJewelry.Common.Entity.DBInterface;
+using JewsJewelry.Context.Contracts.Models;
+using JewsJewelry.Repositories.Contracts.WriteReposInterface;
+using JewsJewelry.Repositories.Marker;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +10,9 @@ using System.Threading.Tasks;
 
 namespace JewsJewelry.Repositories.WriteRepository
 {
-    internal class JewelryWriteRepository
+    public class JewelryWriteRepository : BasedWriteRepository<Jewelry>, IJewelryWriteRepository, IRepositoryMarker
     {
+        public JewelryWriteRepository(IDBWriterContext writerContext)
+            : base(writerContext) { }
     }
 }

@@ -16,9 +16,5 @@ namespace JewsJewelry.Common.Entity.EntityInterface
         /// </summary>
         public DateTimeOffset? DeletedAt { get; set; }
 
-        /// <summary>
-        /// Кто удалил
-        /// </summary>
-        public string? DeletedBy { get; set; }
     }
 }

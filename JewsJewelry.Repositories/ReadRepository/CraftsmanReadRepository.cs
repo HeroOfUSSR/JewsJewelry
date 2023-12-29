@@ -16,7 +16,9 @@ namespace JewsJewelry.Repositories.Implementations
     /// </summary>
     public class CraftsmanReadRepository : ICraftsmanReadRepository, IRepositoryMarker
     {
-
+        /// <summary>
+        /// Для связи с БД
+        /// </summary>
         private IDBRead reader;
 
         public CraftsmanReadRepository(IDBRead reader) 
@@ -24,12 +26,13 @@ namespace JewsJewelry.Repositories.Implementations
             this.reader = reader;
         }
 
-        Task<IReadOnlyCollection<Craftsman>> ICraftsmanReadRepository.GetAllAsync(Guid id, CancellationToken cancellationToken)
+        Task<IReadOnlyCollection<Craftsman>> ICraftsmanReadRepository.GetAllAsync(CancellationToken cancellationToken)
             => reader.Read<Craftsman>()
             .NotDeletedAt()
             .OrderBy(x => x.Name)
             .ToReadOnlyCollectionAsync(cancellationToken);
 
         Task<Craftsman?> ICraftsmanReadRepository.GetByIdAsync(Guid id, CancellationToken cancellationToken)
+            => reader.Read<Craftsman>()
     }
 }

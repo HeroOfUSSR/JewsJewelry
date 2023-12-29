@@ -1,5 +1,7 @@
 ﻿using JewsJewelry.Common.Entity.DBInterface;
+using JewsJewelry.Common.Entity.EntityInterface;
 using JewsJewelry.Context.Contracts;
+using JewsJewelry.Context.Contracts.Config.Configs;
 using JewsJewelry.Context.Contracts.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,9 +29,44 @@ namespace JewsJewelry.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof)
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CraftsmanEntityTypeConfig).Assembly);
         }
-        
+
+
+        async Task<int> IUnitOfWork.SaveChangesAsync(CancellationToken cancellationToken)
+        {
+            var count = await base.SaveChangesAsync(cancellationToken);
+            foreach (var entry in base.ChangeTracker.Entries().ToArray())
+            {
+                entry.State = EntityState.Detached;
+            }
+            return count;
+        }
+
+        /// <summary>
+        /// Чтение сущностей из БД
+        /// </summary>
+        IQueryable<TEntity> IDBRead.Read<TEntity>()
+            => base.Set<TEntity>() .AsNoTracking() .AsQueryable();
+
+        /// <summary>
+        /// Запись сущности в БД
+        /// </summary>
+        void IDBWriter.Add<TEntity>(TEntity entity)
+            => base.Entry(entity) .State = EntityState.Added;
+
+        /// <summary>
+        /// Обновление сущности в БД
+        /// </summary>
+        void IDBWriter.Update<TEntity>(TEntity entity)
+            => base.Entry(entity) .State = EntityState.Modified;
+
+        /// <summary>
+        /// Удаление сущности из БД
+        /// </summary>
+        void IDBWriter.Delete<TEntity>(TEntity entity)
+            => base.Entry(entity) .State = EntityState.Deleted;
+
 
     }
 }

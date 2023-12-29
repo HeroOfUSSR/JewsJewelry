@@ -75,7 +75,6 @@ namespace JewsJewelry.Repositories
             if (entity is IEntityAuditDeleted auditDeleted)
             {
                 auditDeleted.DeletedAt = _writerContext.TimeProvider.CurrentTime;
-                auditDeleted.DeletedBy = _writerContext.User;
             }
         }
 

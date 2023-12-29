@@ -1,19 +1,26 @@
+using JewsJewelry.API.Extensions;
+using JewsJewelry.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.RegistrationControllers();
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+//builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.RegistrationSwagger();
+builder.Services.AddDbContextFactory<JewelryContext>(options
+    => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")), ServiceLifetime.Scoped);
+//builder.Services.AddSwaggerGen();
+builder.Services.RegistrationSRC();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    //app.UseSwagger();
+    //app.UseSwaggerUI();
+    app.CustomizeSwaggerUI();
 }
 
 app.UseHttpsRedirection();

@@ -9,6 +9,11 @@ namespace JewsJewelry.Services.Contracts.Models
     public class WorkshopModel
     {
         /// <summary>
+        /// Идентификатор мастерской
+        /// </summary>
+        public Guid Id { get; set; }
+
+        /// <summary>
         /// Название мастерской
         /// </summary>
         public string Name { get; set; } = string.Empty;

@@ -1,4 +1,5 @@
 ﻿using JewsJewelry.Services.Contracts.Models;
+using JewsJewelry.Services.Contracts.ModelsRequest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,12 +27,12 @@ namespace JewsJewelry.Services.Contracts.Interface
         /// <summary>
         /// Добавляет новый заказ
         /// </summary>
-        Task<OrderModel> AddAsync(OrderModel model, CancellationToken cancellationToken);
+        Task<OrderModel> AddAsync(OrderRequestModel model, CancellationToken cancellationToken);
 
         /// <summary>
         /// Редактирует заказ
         /// </summary>
-        Task<OrderModel> EditAsync(OrderModel source, CancellationToken cancellationToken);
+        Task<OrderModel> EditAsync(OrderRequestModel source, CancellationToken cancellationToken);
 
         /// <summary>
         /// Удаляет заказ

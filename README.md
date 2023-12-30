@@ -10,6 +10,10 @@
 
 ![Mermaid](https://github.com/HeroOfUSSR/JewsJewelry/assets/104492239/29d4caea-1f95-462d-b49a-4838ba83dfb0)
 
+<h1>Пример реального бизнес сценария:</h1>
+
+![Jews](https://github.com/HeroOfUSSR/JewsJewelry/assets/104492239/d3f806d2-c254-485f-8d24-045b23abb967)
+
 <h1>SQL Скрипт:</h1>
 
 ```

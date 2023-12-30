@@ -12,6 +12,7 @@
 
 <h1>SQL Скрипт:</h1>
 
+```
   INSERT INTO Workshop (Id, Name, Address, Speciality, Workplaces, CreatedAt, CreatedBy, UpdatedAt, UpdatedBy, DeletedAt)
   VALUES ('90b8298b-2cb6-4437-9b54-6b54e877f4b5', 'Жёсткая мастерская', 'Невский 111', 'Тонкая работа', 40, 
   SYSDATETIMEOFFSET(), USER_NAME(), SYSDATETIMEOFFSET(), USER_NAME(), NULL);
@@ -37,3 +38,4 @@
   VALUES ('e502486e-5128-4534-8370-59a4dd4a6de1', 'c9bd1abf-6683-48a4-a947-b5a93e4b608e', 'd3912b89-012e-4f6b-aa0d-0cc77a906b98',
   '90b8298b-2cb6-4437-9b54-6b54e877f4b5', 'Срочный', 'Уважаемому клиенту', SYSDATETIMEOFFSET(), DATEADD(DAY, 5, SYSDATETIMEOFFSET()),
   SYSDATETIMEOFFSET(), USER_NAME(), SYSDATETIMEOFFSET(), USER_NAME(), NULL);
+```

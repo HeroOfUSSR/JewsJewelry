@@ -18,14 +18,14 @@ namespace JewsJewelry.Services.Validation
     {
         private readonly Dictionary<Type, IValidator> validators = new Dictionary<Type, IValidator>();
 
-        public ServiceValidator(IJewelryReadRepository jewelryReadRepository,
+        public ServiceValidator(ICraftsmanReadRepository craftsmanReadRepository, IJewelryReadRepository jewelryReadRepository,
             ICustomerReadRepository customerReadRepository, IWorkshopReadRepository workshopReadRepository)
         {
             validators.Add(typeof(CraftsmanModel), new CraftsmanModelValidator());
             validators.Add(typeof(CustomerModel), new CustomerModelValidator());
             validators.Add(typeof(JewelryModel), new JewelryModelValidator());
             validators.Add(typeof(MaterialModel), new MaterialModelValidator());
-            validators.Add(typeof(WorkshopModel), new WorkshopModelValidator());
+            validators.Add(typeof(WorkshopModel), new WorkshopModelValidator(craftsmanReadRepository));
             validators.Add(typeof(OrderRequestModel), new OrderRequestValidator(jewelryReadRepository,
                 customerReadRepository, workshopReadRepository));
         }

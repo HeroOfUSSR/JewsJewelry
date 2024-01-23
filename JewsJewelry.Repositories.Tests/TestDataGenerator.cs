@@ -47,6 +47,7 @@ namespace JewsJewelry.Repositories.Tests
         {
             var result = new Jewelry
             {
+                //MaterialId = Guid.NewGuid(),
                 Name = $"{Guid.NewGuid():N}",
                 Cost = 10000,
                 Weight = 100,

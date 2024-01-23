@@ -1,5 +1,7 @@
 ﻿using FluentValidation;
+using JewsJewelry.Repositories.Contracts.Interface;
 using JewsJewelry.Services.Contracts.Models;
+using JewsJewelry.Services.Contracts.ModelsRequest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,7 @@ namespace JewsJewelry.Services.Validation.Validators
 {
     public class CraftsmanModelValidator : AbstractValidator<CraftsmanModel>
     {
+
         public CraftsmanModelValidator()
         {
             RuleFor(bruh => bruh.Name)
@@ -30,7 +33,7 @@ namespace JewsJewelry.Services.Validation.Validators
             RuleFor(bruh => bruh.PhoneNumber)
                .NotEmpty().WithMessage(ValidatorMessage.DefaultMessage)
                .NotNull().WithMessage(ValidatorMessage.DefaultMessage)
-               .Length(9, 13).WithMessage(ValidatorMessage.LengthMessage);
+               .Length(9, 12).WithMessage(ValidatorMessage.LengthMessage);
 
             RuleFor(bruh => bruh.Age)
                .InclusiveBetween(10, 150).WithMessage(ValidatorMessage.InclusiveBetweenMessage);

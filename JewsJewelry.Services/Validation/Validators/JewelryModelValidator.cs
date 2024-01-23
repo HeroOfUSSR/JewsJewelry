@@ -1,5 +1,7 @@
 ﻿using FluentValidation;
+using JewsJewelry.Repositories.Contracts.Interface;
 using JewsJewelry.Services.Contracts.Models;
+using JewsJewelry.Services.Contracts.ModelsRequest;
 using System;
 using System.Collections.Generic;
 using System.Linq;

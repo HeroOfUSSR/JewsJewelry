@@ -15,11 +15,11 @@ namespace JewsJewelry.Services.TestsNew
         {
             var result = new Craftsman
             {
-                Name = $"{Guid.NewGuid():N}",
-                Surname = $"{Guid.NewGuid():N}",
-                Patronymic = $"{Guid.NewGuid():N}",
-                PhoneNumber = $"{Guid.NewGuid():N}",
-                Age = 24
+                Name = "Михаил",
+                Surname = "Зубенко",
+                Patronymic = "Петрович",
+                PhoneNumber = "88005553535",
+                Age = 33
             };
             result.BaseAuditParameters();
 
@@ -117,7 +117,7 @@ namespace JewsJewelry.Services.TestsNew
                 Name = $"{Guid.NewGuid():N}",
                 Surname = $"{Guid.NewGuid():N}",
                 Patronymic = $"{Guid.NewGuid():N}",
-                PhoneNumber = $"{Guid.NewGuid():N}",
+                PhoneNumber = "88005553535",
                 Age = 24
             };
 
@@ -134,7 +134,7 @@ namespace JewsJewelry.Services.TestsNew
                 Name = $"{Guid.NewGuid():N}",
                 Surname = $"{Guid.NewGuid():N}",
                 Patronymic = $"{Guid.NewGuid():N}",
-                PhoneNumber = $"{Guid.NewGuid():N}",
+                PhoneNumber = "88005553535",
                 Email = "aboba@gmail.com"
             };
 

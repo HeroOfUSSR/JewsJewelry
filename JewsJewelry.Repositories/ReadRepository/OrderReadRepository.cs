@@ -40,6 +40,6 @@ namespace JewsJewelry.Repositories.Implementations
             .FirstOrDefaultAsync(cancellationToken);
 
         Task<bool> IOrderReadRepository.IsNotNullAsync(Guid id, CancellationToken cancellationToken)
-            => reader.Read<Customer>().AnyAsync(x => x.Id == id && !x.DeletedAt.HasValue, cancellationToken);
+            => reader.Read<Order>().AnyAsync(x => x.Id == id && !x.DeletedAt.HasValue, cancellationToken);
     }
 }

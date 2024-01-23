@@ -47,6 +47,6 @@ namespace JewsJewelry.Repositories.Implementations
             .ToDictionaryAsync(x => x.Id, cancellationToken);
 
         Task<bool> IJewelryReadRepository.IsNotNullAsync(Guid id, CancellationToken cancellationToken)
-            => reader.Read<Customer>().AnyAsync(x => x.Id == id && !x.DeletedAt.HasValue, cancellationToken);
+            => reader.Read<Jewelry>().AnyAsync(x => x.Id == id && !x.DeletedAt.HasValue, cancellationToken);
     }
 }
